@@ -17,14 +17,15 @@ class BusListActivity : AppCompatActivity() {
 
 
     companion object {
-        const val BUS = "bus"}
+        const val BUS = "bus"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bus_list)
     }
 
-    private fun setupViews(){
+    private fun setupViews() {
 
         races.layoutManager = LinearLayoutManager(this)
 
@@ -34,12 +35,14 @@ class BusListActivity : AppCompatActivity() {
             Log.d("GET_ALL_RACES", listRaces.toString())
 
             runOnUiThread {
-                races.adapter = RacesAdapter(listRaces, onItemClick = {
-                    val intent = Intent(this, BusInfoActivity::class.java)
-                    intent.putExtra(BUS, it)
-                    startActivity(intent)
-                },
-                    this)
+                races.adapter = RacesAdapter(
+                    listRaces, onItemClick = {
+                        val intent = Intent(this, BusInfoActivity::class.java)
+                        intent.putExtra(BUS, it)
+                        startActivity(intent)
+                    },
+                    this
+                )
 
             }
         }
