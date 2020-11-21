@@ -658,7 +658,20 @@ class BusInfoActivity : AppCompatActivity() {
 
     private fun setupViews() {
         bronirovat.setOnClickListener {
-            val intent = Intent(this, BusListActivity::class.java)
+            val places = listOf(pl1, pl2, pl3,pl4,pl5,pl6,pl7,pl8,pl9,pl10,pl11,pl12,pl13,pl14,pl15,
+                                pl16,pl17,pl18,pl19,pl20,pl21,pl22,pl23,pl24,pl25,pl26,pl27,pl28,pl29,pl30,
+                                pl31,pl32,pl33,pl34,pl35,pl36,pl37,pl38,pl39,pl40,pl41,pl42,pl43,pl44,pl45,
+                                pl46,pl47,pl48,pl49,pl50,pl51)
+
+            var n = 1
+
+            for(i in places){
+                if(i) break
+                else n++
+            }
+
+            val intent = Intent(this, PassengersActivity::class.java)
+            intent.putExtra("place", n)
             startActivity(intent)
         }
     }

@@ -25,7 +25,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txt_from"
             android:textColorHint="#6F6F6F"
-            android:textColor="#FFFFFF"
+            android:textColor="#000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="From" />
@@ -61,7 +61,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txt_to"
                 android:textColorHint="#6F6F6F"
-                android:textColor="#FFFFFF"
+                android:textColor="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="To" />
