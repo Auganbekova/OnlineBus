@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_bus_info.*
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -71,7 +72,14 @@ class BusInfoActivity : AppCompatActivity() {
     var pl51 = false
     val list = mutableListOf(0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0)
 
+
     private fun clickPlaces() {
+        val selectedAlert = AlertDialog.Builder(this)
+        selectedAlert.setTitle("Занято!")
+        selectedAlert.setMessage("Выберите другое место!")
+        selectedAlert.setPositiveButton("Ok") { dialog, which -> }
+
+
         place_1.setOnClickListener {
             if (!pl1) {
                 place_1.setBackgroundResource(R.drawable.back_selected)
@@ -489,15 +497,9 @@ class BusInfoActivity : AppCompatActivity() {
             }
         }
         place_37.setOnClickListener {
-            if (!pl37) {
-                place_37.setBackgroundResource(R.drawable.back_selected)
-                place_37.setTextColor(Color.parseColor("#FFFFFF"))
-                pl37 = true
-            } else {
-                place_37.setBackgroundResource(R.drawable.back_buttons)
-                place_37.setTextColor(Color.parseColor("#000000"))
-                pl37 = false
-            }
+
+                selectedAlert.show()
+
         }
         place_38.setOnClickListener {
             if (!pl38) {
@@ -555,15 +557,8 @@ class BusInfoActivity : AppCompatActivity() {
             }
         }
         place_43.setOnClickListener {
-            if (!pl43) {
-                place_43.setBackgroundResource(R.drawable.back_selected)
-                place_43.setTextColor(Color.parseColor("#FFFFFF"))
-                pl43 = true
-            } else {
-                place_43.setBackgroundResource(R.drawable.back_buttons)
-                place_43.setTextColor(Color.parseColor("#000000"))
-                pl43 = false
-            }
+                selectedAlert.show()
+
         }
         place_44.setOnClickListener {
             if (!pl44) {
@@ -599,59 +594,25 @@ class BusInfoActivity : AppCompatActivity() {
             }
         }
         place_47.setOnClickListener {
-            if (!pl47) {
-                place_47.setBackgroundResource(R.drawable.back_selected)
-                place_47.setTextColor(Color.parseColor("#FFFFFF"))
-                pl47 = true
-            } else {
-                place_47.setBackgroundResource(R.drawable.back_buttons)
-                place_47.setTextColor(Color.parseColor("#000000"))
-                pl47 = false
-            }
+                selectedAlert.show()
+
         }
         place_48.setOnClickListener {
-            if (!pl48) {
-                place_48.setBackgroundResource(R.drawable.back_selected)
-                place_48.setTextColor(Color.parseColor("#FFFFFF"))
-                pl48 = true
-            } else {
-                place_48.setBackgroundResource(R.drawable.back_buttons)
-                place_48.setTextColor(Color.parseColor("#000000"))
-                pl48 = false
-            }
+
+                selectedAlert.show()
+
         }
         place_49.setOnClickListener {
-            if (!pl49) {
-                place_49.setBackgroundResource(R.drawable.back_selected)
-                place_49.setTextColor(Color.parseColor("#FFFFFF"))
-                pl49 = true
-            } else {
-                place_49.setBackgroundResource(R.drawable.back_buttons)
-                place_49.setTextColor(Color.parseColor("#000000"))
-                pl49 = false
-            }
+                selectedAlert.show()
+
         }
         place_50.setOnClickListener {
-            if (!pl50) {
-                place_50.setBackgroundResource(R.drawable.back_selected)
-                place_50.setTextColor(Color.parseColor("#FFFFFF"))
-                pl50 = true
-            } else {
-                place_50.setBackgroundResource(R.drawable.back_buttons)
-                place_50.setTextColor(Color.parseColor("#000000"))
-                pl50 = false
-            }
+                selectedAlert.show()
+
         }
         place_51.setOnClickListener {
-            if (!pl51) {
-                place_51.setBackgroundResource(R.drawable.back_selected)
-                place_51.setTextColor(Color.parseColor("#FFFFFF"))
-                pl51 = true
-            } else {
-                place_51.setBackgroundResource(R.drawable.back_buttons)
-                place_51.setTextColor(Color.parseColor("#000000"))
-                pl51 = false
-            }
+                selectedAlert.show()
+
         }
 
     }
